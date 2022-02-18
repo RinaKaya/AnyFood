@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailActivity">
+
+    <ImageView
+        android:id="@+id/imageViewThumbDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/plate" />
+
+    <TextView
+        android:id="@+id/textViewCaloriesDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:textStyle="italic"
+        android:textSize="18dp"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewThumbDetail" />
+
+    <TextView
+        android:id="@+id/textViewDifficultyDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:padding="8dp"
+        android:text="difficulty"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewThumbDetail" />
+
+    <TextView
+        android:id="@+id/textViewNameDetail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewDifficultyDetail" />
+
+    <TextView
+        android:id="@+id/textViewHeadlineDetail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewNameDetail" />
+
+    <TextView
+        android:id="@+id/textViewDescriptionDetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewHeadlineDetail" />
+
+    <TextView
+        android:id="@+id/textViewLabelCarbos"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="carbos"
+        android:textStyle="bold"
+        android:layout_margin="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDescriptionDetail"/>
+
+    <TextView
+        android:id="@+id/textViewLabelProteins"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="proteins"
+        android:textStyle="bold"
+        android:layout_margin="8dp"
+        app:layout_constraintStart_toEndOf="@+id/textViewLabelCarbos"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDescriptionDetail" />
+
+    <TextView
+        android:id="@+id/textViewLabelFats"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="fats"
+        android:textStyle="bold"
+        android:layout_margin="8dp"
+        app:layout_constraintStart_toEndOf="@+id/textViewLabelProteins"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDescriptionDetail"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/textViewCarbos"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="30 г"
+        android:paddingBottom="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/textViewLabelCarbos"
+        app:layout_constraintStart_toStartOf="@+id/textViewLabelCarbos"
+        app:layout_constraintTop_toBottomOf="@+id/textViewLabelCarbos" />
+
+    <TextView
+        android:id="@+id/textViewProteins"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="20 г"
+        android:paddingBottom="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/textViewLabelProteins"
+        app:layout_constraintStart_toStartOf="@+id/textViewLabelProteins"
+        app:layout_constraintTop_toBottomOf="@+id/textViewLabelProteins" />
+
+    <TextView
+        android:id="@+id/textViewFats"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="10 г"
+        android:paddingBottom="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/textViewLabelFats"
+        app:layout_constraintStart_toStartOf="@+id/textViewLabelFats"
+        app:layout_constraintTop_toBottomOf="@+id/textViewLabelFats" />
+
+    <TextView
+        android:id="@+id/textViewLabelTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:textStyle="bold"
+        android:text="Время приготовления: "
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCarbos" />
+
+    <TextView
+        android:id="@+id/textViewTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintStart_toEndOf="@+id/textViewLabelTime"
+        app:layout_constraintTop_toBottomOf="@+id/textViewFats" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
