@@ -18,9 +18,19 @@ import java.util.List;
 public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.FoodViewHolder> {
 
     private List<Food> arrFood;
+    private OnCardViewClickListener onCardViewClickListener;
 
     public FoodAdapter() {
         arrFood = new ArrayList<>();
+    }
+
+    //для нажатия на карточку еды
+    interface OnCardViewClickListener {
+        void onCardViewClick(int position);
+    }
+
+    public void setOnCardViewClickListener(OnCardViewClickListener onCardViewClickListener) {
+        this.onCardViewClickListener = onCardViewClickListener;
     }
 
     @NonNull
@@ -59,7 +69,6 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.FoodViewHolder
         ImageView imageViewPreview = holder.imageViewPreview;
         Picasso.get().load(food.getImage()).into(imageViewPreview);
 
-        //holder.textViewDifficulty.setInt(food.getDifficulty());
         holder.textViewCalories.setText(food.getCalories());
         holder.textViewName.setText(food.getName());
         holder.textViewHeadline.setText(food.getHeadline());
@@ -87,6 +96,15 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.FoodViewHolder
 
         public FoodViewHolder(@NonNull View itemView) {
             super(itemView);
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if (onCardViewClickListener != null) {
+                        onCardViewClickListener.onCardViewClick(getAdapterPosition());
+                    }
+                }
+            });
+
             imageViewPreview = itemView.findViewById(R.id.imageViewPreview);
             textViewDifficulty = itemView.findViewById(R.id.textViewDifficulty);
             textViewCalories = itemView.findViewById(R.id.textViewCalories);

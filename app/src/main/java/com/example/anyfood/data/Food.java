@@ -1,16 +1,16 @@
 package com.example.anyfood.data;
 
-import android.arch.persistence.room.Entity;
-import android.arch.persistence.room.PrimaryKey;
+
+import androidx.annotation.NonNull;
+import androidx.room.Entity;
+import androidx.room.Ignore;
+import androidx.room.PrimaryKey;
 
 /** Данный класс описывает еду. */
 
-@Entity(tableName = "food")
 public class Food {
 
-    @PrimaryKey
     private String id;
-
     private int difficulty; //уровень сложности приготовления блюда
     private String name; //название блюда
     private String headline; //подстрочник к названию
@@ -38,6 +38,8 @@ public class Food {
         this.time = time;
     }
 
+
+    //геттеры и сеттеры
     public String getId() {
         return id;
     }

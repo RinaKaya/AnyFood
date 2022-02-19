@@ -11,9 +11,6 @@ import java.util.ArrayList;
 /** В этом классе преобразовываем JSON в объект. */
 
 public class JSONUtils {
-
-    private static final String KEY = "key";
-
     private static final String KEY_ID = "id";
     private static final String KEY_DIFFICULTY = "difficulty"; //уровень сложности приготовления блюда
     private static final String KEY_NAME = "name"; //название блюда
