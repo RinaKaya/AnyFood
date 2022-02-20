@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
         switchSort.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
-                setMethodOfSort(isChecked);
+                setMethodOfSort(isChecked, arrFood);
             }
         });
 
@@ -92,25 +92,19 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    public void onClickSetSimple(View view) {
-        setMethodOfSort(false);
-        switchSort.setChecked(false);
-    }
-
-    public void onClickSetHard(View view) {
-        setMethodOfSort(true);
-        switchSort.setChecked(true);
-    }
-
-    private void setMethodOfSort(boolean isHard) {
+    private void setMethodOfSort(boolean isHard, ArrayList<Food> arrFood) {
         if (isHard) {
             textViewHard.setTextColor(getResources().getColor(R.color.red_pink));
             textViewSimply.setTextColor(getResources().getColor(R.color.black));
-            Toast.makeText(MainActivity.this, "Свич включен", Toast.LENGTH_SHORT).show();
+            Collections.reverse(arrFood);
+            foodAdapter.setArrFood(arrFood);
+            //Toast.makeText(MainActivity.this, "Свич включен", Toast.LENGTH_SHORT).show();
         } else {
             textViewSimply.setTextColor(getResources().getColor(R.color.red_pink));
             textViewHard.setTextColor(getResources().getColor(R.color.black));
-            Toast.makeText(MainActivity.this, "Свич выкл", Toast.LENGTH_SHORT).show();
+            Collections.sort(arrFood, Food.COMPARE_BY_DIFFICULTY);
+            foodAdapter.setArrFood(arrFood);
+            //Toast.makeText(MainActivity.this, "Свич выкл", Toast.LENGTH_SHORT).show();
         }
     }
 }

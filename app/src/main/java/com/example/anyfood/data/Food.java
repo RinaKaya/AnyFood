@@ -6,6 +6,8 @@ import androidx.room.Entity;
 import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
+import java.util.Comparator;
+
 /** Данный класс описывает еду. */
 
 public class Food {
@@ -38,6 +40,12 @@ public class Food {
         this.time = time;
     }
 
+    public static final Comparator<Food> COMPARE_BY_DIFFICULTY = new Comparator<Food>() {
+        @Override
+        public int compare(Food lhs, Food rhs) {
+            return lhs.getDifficulty() - rhs.getDifficulty();
+        }
+    };
 
     //геттеры и сеттеры
     public String getId() {
