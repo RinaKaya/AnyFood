@@ -63,6 +63,7 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.FoodViewHolder
                 colorId = holder.itemView.getResources().getColor(android.R.color.darker_gray);
                 break;
         }
+        //colorId = holder.itemView.getResources().getColor(android.R.color.arColor[dificult]);
         holder.textViewDifficulty.setBackgroundColor(colorId);
 
         //здесь устанавливаем значения для элементов макета food_item

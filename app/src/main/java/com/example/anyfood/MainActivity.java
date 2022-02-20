@@ -25,6 +25,8 @@ import com.example.anyfood.utils.NetworkUtils;
 import org.json.JSONArray;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
@@ -41,10 +43,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        foodAdapter = new FoodAdapter();
+
         JSONArray jsonArray = NetworkUtils.getJSONFromNetwork();
         ArrayList<Food> arrFood = JSONUtils.getArrFoodFromJSON(jsonArray);
-
-        foodAdapter = new FoodAdapter();
 
         switchSort = findViewById(R.id.switchSort);
         textViewSimply = findViewById(R.id.textViewSimply);
@@ -53,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
         recyclerViewItemsFood = findViewById(R.id.recyclerViewItemsFood);
         recyclerViewItemsFood.setLayoutManager(new LinearLayoutManager(this));
         foodAdapter.setArrFood(arrFood);
+
         recyclerViewItemsFood.setAdapter(foodAdapter); //устанавливаем адаптер у RecyclerView
 
         switchSort.setChecked(true);

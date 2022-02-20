@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">anyFood</string>
+    <string name="carbos">carbos</string>
+    <string name="proteins">proteins</string>
+    <string name="fats">fats</string>
+    <string name="text_headline">headline for name</string>
+    <string name="name_food">Name food</string>
+    <string name="difficulty">difficulty</string>
+    <string name="image_preview">image preview</string>
+    <string name="time">Time: </string>
+    <string name="start_simple">сначала простые</string>
+    <string name="start_hard">сначала сложные</string>
 </resources>
