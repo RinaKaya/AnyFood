@@ -20,105 +20,14 @@
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/plate" />
 
-        <TextView
-            android:id="@+id/textViewCaloriesDetail"
-            style="@style/сalories_style"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageViewThumbDetail" />
-
-        <TextView
-            android:id="@+id/textViewDifficultyDetail"
-            style="@style/difficulty_style"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:text="@string/difficulty"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageViewThumbDetail" />
-
-        <TextView
-            android:id="@+id/textViewNameDetail"
+        <include
+            layout="@layout/food_info"
+            android:id="@+id/foodInfo"
             android:layout_width="0dp"
-            style="@style/text_detail_style"
-            android:textSize="@dimen/text_size_detail"
-            android:textStyle="bold"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/textViewDifficultyDetail" />
-
-        <TextView
-            android:id="@+id/textViewHeadlineDetail"
-            android:layout_width="0dp"
-            style="@style/text_detail_style"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textViewNameDetail" />
-
-        <TextView
-            android:id="@+id/textViewDescriptionDetail"
-            android:layout_width="match_parent"
-            style="@style/text_detail_style"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textViewHeadlineDetail" />
-
-        <TextView
-            android:id="@+id/textViewLabelCarbos"
-            style="@style/label_style"
-            android:text="@string/carbos"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textViewDescriptionDetail" />
-
-        <TextView
-            android:id="@+id/textViewLabelProteins"
-            style="@style/label_style"
-            android:text="@string/proteins"
-            app:layout_constraintStart_toEndOf="@+id/textViewLabelCarbos"
-            app:layout_constraintTop_toBottomOf="@+id/textViewDescriptionDetail" />
-
-        <TextView
-            android:id="@+id/textViewLabelFats"
-            style="@style/label_style"
-            android:text="@string/fats"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/textViewLabelProteins"
-            app:layout_constraintTop_toBottomOf="@+id/textViewDescriptionDetail" />
-
-        <TextView
-            android:id="@+id/textViewCarbos"
-            style="@style/carbos_proteins_fats_style"
-            app:layout_constraintEnd_toEndOf="@+id/textViewLabelCarbos"
-            app:layout_constraintStart_toStartOf="@+id/textViewLabelCarbos"
-            app:layout_constraintTop_toBottomOf="@+id/textViewLabelCarbos" />
-
-        <TextView
-            android:id="@+id/textViewProteins"
-            style="@style/carbos_proteins_fats_style"
-            app:layout_constraintEnd_toEndOf="@+id/textViewLabelProteins"
-            app:layout_constraintStart_toStartOf="@+id/textViewLabelProteins"
-            app:layout_constraintTop_toBottomOf="@+id/textViewLabelProteins" />
-
-        <TextView
-            android:id="@+id/textViewFats"
-            style="@style/carbos_proteins_fats_style"
-            app:layout_constraintEnd_toEndOf="@+id/textViewLabelFats"
-            app:layout_constraintStart_toStartOf="@+id/textViewLabelFats"
-            app:layout_constraintTop_toBottomOf="@+id/textViewLabelFats" />
-
-        <TextView
-            android:id="@+id/textViewLabelTime"
-            android:layout_width="wrap_content"
-            style="@style/text_detail_style"
-            android:text="@string/time"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textViewCarbos" />
-
-        <TextView
-            android:id="@+id/textViewTime"
-            android:layout_width="wrap_content"
-            style="@style/text_detail_style"
-            app:layout_constraintStart_toEndOf="@+id/textViewLabelTime"
-            app:layout_constraintTop_toBottomOf="@+id/textViewFats" />
+            app:layout_constraintTop_toBottomOf="@id/imageViewThumbDetail"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
