@@ -8,6 +8,7 @@
     <string name="difficulty">difficulty</string>
     <string name="image_preview">image preview</string>
     <string name="time">Time: </string>
-    <string name="start_simple">сначала простые</string>
-    <string name="start_hard">сначала сложные</string>
+    <string name="start_simple">set simple</string>
+    <string name="start_hard">set hard</string>
+    <string name="image_detail">image of detail</string>
 </resources>
